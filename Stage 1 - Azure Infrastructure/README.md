@@ -40,6 +40,8 @@ Two virtual machines were deployed in Azure: a Windows Server 2025 domain contro
 
 **Expected Result:** The resource group `rg-ad-infrastructure` appears in the Azure Resource Groups list and provides a location for the lab's virtual machines and networking resources.
 
+![Azure Resource Group](./rg-ad-infrastructure.png)
+
 ### Step 2: Create the Virtual Network
 
 1. In the Azure Portal, search for **Virtual networks**.
@@ -53,6 +55,8 @@ Two virtual machines were deployed in Azure: a Windows Server 2025 domain contro
 9. Review the configuration and select **Create**.
 
 **Expected Result:** The virtual network and its default subnet are deployed successfully.
+
+![A&J Market Virtual Network](./net-corp-network.png)
 
 ### Step 3: Deploy the Windows Server Domain Controller
 
@@ -69,6 +73,8 @@ Two virtual machines were deployed in Azure: a Windows Server 2025 domain contro
 11. Review the remaining settings and deploy the virtual machine.
 
 **Expected Result:** Azure successfully deploys `AZ-DC01`, which serves as the Windows Server machine for the lab.
+
+![Windows Server 2025 Domain Controller](./Deployed%20the%20Windows%20Server%202025%20domain%20controller%20%28AZ-DC01.png)
 
 The server's private IP address was `10.0.0.4`.
 
@@ -88,6 +94,8 @@ The server's private IP address was `10.0.0.4`.
 
 **Expected Result:** Azure successfully deploys `AZ-CLIENT01` within the same virtual network as the domain controller.
 
+![Windows 11 Client Deployment](./Deployed%20the%20Windows%2011%20client%20%28AZ-CLIENT01%29.png)
+
 The client received the private IP address `10.0.0.5`.
 
 ### Step 5: Configure the Client's DNS Server
@@ -103,6 +111,10 @@ The client computer must use the domain controller as its DNS server so it can l
 7. Save the configuration.
 
 **Expected Result:** The client is configured to use `AZ-DC01` at `10.0.0.4` for DNS resolution.
+
+![Client DNS Configuration in Azure](./CLIENT01%20NIC.png)
+
+![Client DNS Verification in Windows](./ipconfig%20info%20on%20CLIENT01%20copy.png)
 
 The client's own private IP remains `10.0.0.5`.
 
@@ -128,6 +140,8 @@ ping 10.0.0.4
 ```
 
 **Expected Result:** The client successfully receives replies from `10.0.0.4`, confirming network communication with the domain controller.
+
+![Successful Ping from AZ-CLIENT01 to AZ-DC01](./Ping%20DC%20from%20CLIENT01%20copy.png)
 
 The connectivity test returned four successful replies.
 

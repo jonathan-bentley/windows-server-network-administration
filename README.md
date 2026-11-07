@@ -39,11 +39,12 @@ The lab simulates the IT environment of A&J Market, a fictional retail business.
 
 ### Project Stages
 
-1. **Stage 1 — Azure Infrastructure:** Deployed the domain controller and Windows 11 client virtual machines and configured network connectivity.
-2. **Stage 2 — Active Directory:** Installed AD DS, created a domain, configured organizational units, and created employee accounts using PowerShell.
-3. **Stage 3 — Account Security:** Configured account lockout policies, tested account disabling and re-enabling, and reviewed Windows security events.
-4. **Stage 4 — DNS Administration:** Created and tested A and CNAME records, investigated DNS caching, and verified name resolution.
-5. **Stage 5 — Network File Shares and Permissions:** Configured shared folders, access permissions, and security groups; tested access using a standard employee account.
+1. **[Stage 1 — Azure Infrastructure](./Stage%201%20-%20Azure%20Infrastructure/README.md):** Deployed the domain controller and Windows 11 client virtual machines and configured network connectivity.
+2. **[Stage 2 — Active Directory](./Stage%202%20-%20Active%20Directory/README.md):** Installed AD DS, created a domain, configured organizational units, and created employee accounts using PowerShell.
+3. **[Stage 3 — Account Security](./Stage%203%20-%20Account%20Security/README.md):** Configured account lockout policies, tested account disabling and re-enabling, and reviewed Windows security events.
+4. **[Stage 4 — DNS Configuration](./Stage%204%20-%20DNS%20Configuration/README.md):** Created and tested A and CNAME records, investigated DNS caching, and verified name resolution.
+5. **[Stage 5 — Network File Shares and Permissions](./Stage%205%20-%20Network%20File%20Shares%20and%20Permissions/README.md):** Configured shared folders, access permissions, and security groups; tested access using a standard employee account.
+
 
 ### Project Objectives
 
